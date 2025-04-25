@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Farah Anguru</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #4a1a2c;
+      margin: 0;
+      padding: 15px;
+    }
+    
+    .halaman {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    h1, h2, h3 {
+      color: #c83e6f;
+      text-align: center;
+    }
+    
+    .btn, .nav-btn, .back-link {
+      display: inline-block;
+      background-color: #8f1739;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .btn:hover, .nav-btn:hover, .back-link:hover {
+      background-color: #c83e6f;
+    }
+    
+    .nav-buttons {
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    /* Biodata styles */
+    .biodata-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    
+    .profile-photo img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      border: 3px solid #ffb6c1;
+    }
+    
+    .biodata-content {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .label {
+      font-weight: bold;
+      color: #a22c58;
+    }
+    
+    /* Jadwal styles */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    
+    .day-box {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      width: 45%;
+      min-width: 280px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Media queries */
+    @media screen and (max-width: 700px) {
+      .biodata-box {
+        flex-direction: column;
+        align-items: center;
+      }
+      .day-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Halaman Utama -->
+  <div id="halaman-utama" class="halaman">
+    <h1>Hai Semua! Saya Farah Anguru</h1>
+    <p style="text-align: center;">Selamat datang di halaman profil saya!</p>
+    <div style="text-align: center;">
+      <a onclick="bukaBiodata()" class="btn">Klik di sini yaa</a>
+    </div>
+  </div>
+
+  <!-- Halaman Biodata -->
+  <div id="halaman-biodata" class="halaman" style="display: none;">
+    <h2>Biodata Saya</h2>
+    <div class="biodata-box">
+      <div class="profile-photo">
+        <img src="foto.jpg" alt="Foto Farah Anguru">
+      </div>
+      <div class="biodata-content">
+        <p><span class="label">Nama:</span> Farah Anguru</p>
+        <p><span class="label">NPM:</span> E1G022074</p>
+        <p><span class="label">Program Studi:</span> Teknologi Industri Pertanian</p>
+        <p><span class="label">Tempat, Tanggal Lahir:</span> Palembang, 30 Januari 2005</p>
+        <p><span class="label">Alamat:</span> Jl. Fatmawati 1</p>
+        <p><span class="label">Email:</span> Uchafarah30@gmail.com</p>
+        <p><span class="label">No. HP:</span> 082289813968</p>
+        <p><span class="label">Hobi:</span> Nonton Anime, Mabar ML, Makeup</p>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <a onclick="bukaHalamanUtama()" class="nav-btn">← Kembali</a>
+      <a onclick="bukaJadwal()" class="nav-btn">Lanjut →</a>
+    </div>
+  </div>
+
+  <!-- Halaman Jadwal -->
+  <div id="halaman-jadwal" class="halaman" style="display: none;">
+    <h2>📚 Jadwal Mata Kuliah Semester 6</h2>
+    <div class="grid">
+      <div class="day-box">
+        <h3>🌸 Senin</h3>
+        <p>💻 Komputer & Pemrograman: R.20 – 08.00–09.40</p>
+        <p>⚙️ Rekayasa Proses: R.20 – 10.00–11.40</p>
+        <p>📝 Karya Tulis Ilmiah: R.4 – 14.00–15.40</p>
+        <p>🍱 Teknologi Makanan Tradisional: R.20 – 16.00–17.40</p>
+      </div>
+
+      <div class="day-box">
+        <h3>🌸 Selasa</h3>
+        <p>📝 Coass Fisika: 08.00 - 10.00</p>
+        <p>☕ Kewirausahaan: R.10 – 12.00</p>
+      </div>
+
+      <div class="day-box">
+        <h3>🌸 Rabu</h3>
+        <p>🗣️ Bahasa Inggris Akademik: R.23 – 10.00–11.40</p>
+        <p>🧠 Coass TTCK: 12.00 - 14.00</p>
+        <p>🧠 Analisis Keputusan: R.4 – 14.00–15.40</p>
+      </div>
+
+      <div class="day-box">
+        <h3>🌸 Kamis</h3>
+        <p>🧘‍♀️Just Chilling: 06.30–24.00</p>
+      </div>
+
+      <div class="day-box">
+        <h3>🌸 Jumat</h3>
+        <p>🌿 Teknologi Hasil Perkebunan – R.9 – 08.00–09.40</p>
+        <p>🧼 K3: R.6 – 14.00 - 16.00</p>
+      </div>
+
+      <div class="day-box">
+        <h3>🌸 Sabtu - minggu</h3>
+        <p>💖 Istirahat</p>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a onclick="bukaBiodata()" class="back-link">← Kembali ke Biodata</a>
+    </div>
+  </div>
+
+  <script>
+    // Fungsi untuk navigasi
+    function bukaHalamanUtama() {
+      document.getElementById('halaman-utama').style.display = 'block';
+      document.getElementById('halaman-biodata').style.display = 'none';
+      document.getElementById('halaman-jadwal').style.display = 'none';
+    }
+
+    function bukaBiodata() {
+      document.getElementById('halaman-utama').style.display = 'none';
+      document.getElementById('halaman-biodata').style.display = 'block';
+      document.getElementById('halaman-jadwal').style.display = 'none';
+    }
+
+    function bukaJadwal() {
+      document.getElementById('halaman-utama').style.display = 'none';
+      document.getElementById('halaman-biodata').style.display = 'none';
+      document.getElementById('halaman-jadwal').style.display = 'block';
+    }
+
+    // Set halaman awal
+    window.onload = function() {
+      bukaHalamanUtama();
+    };
+  </script>
+</body>
+</html>
